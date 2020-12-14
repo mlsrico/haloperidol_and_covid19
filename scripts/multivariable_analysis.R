@@ -58,10 +58,3 @@ summary(resw) ## summary
 vif(res_multi)
 
 
-# Check for outliers ---- 
-
-univ_dat <- dat %>% mutate(residuals = residuals(res, "deviance")) # deviance residuals
-summary(residuals(res, "deviance")) # exploring residuals
-
-no_out <- univ_dat %>% filter(residuals <= 2.5, residuals >=-2.5) # sample with residuals < -2.5 & < 2.5
-

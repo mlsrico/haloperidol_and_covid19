@@ -63,14 +63,6 @@ summary(resw) ## summary
 
 
 
-# Check for outliers ---- 
-
-univ_dat <- dat %>% mutate(residuals = residuals(res, "deviance")) # deviance residuals
-summary(residuals(res, "deviance")) # exploring residuals
-
-no_out <- univ_dat %>% filter(residuals <= 2.5, residuals >=-2.5) # sample with residuals < -2.5 & < 2.5
-
-
 # KM-curves ---- 
 
 fontsz <- 30
@@ -86,7 +78,7 @@ resplot2 <- ggsurvplot(fit, data = match_plot,
                        legend.labs=c("Haloperidol","Non-exposed matched group"), 
                        censor = T,
                        xlab = "Days", ylab = "Probability of being event-free", 
-                       conf.int = TRUE, conf.int.alpha = 0.07, #confidence intervals
+                       conf.int = TRUE, conf.int.alpha = 0.05, #confidence intervals
                        palette = c("gray2", "gray"), 
                        ggtheme = theme_bw())
 

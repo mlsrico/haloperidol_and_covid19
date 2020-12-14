@@ -50,7 +50,7 @@ resplot0 <- ggsurvplot(fit, data = plot,
                        legend.labs=c("Haloperidol","Non-exposed group"), 
                        censor = T,
                        xlab = "Days", ylab = "Probability of being event-free", 
-                       conf.int = TRUE, conf.int.alpha = 0.07, #confidence intervals
+                       conf.int = TRUE, conf.int.alpha = 0.05, #confidence intervals
                        palette = c("gray2", "gray"), 
                        ggtheme = theme_bw())
 
