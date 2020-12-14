@@ -4,10 +4,10 @@ The present repository contains a coding example of the analyses performed for t
 
 **Contents**: 
 
-* `crude_analysis.R`: required packages and coding for crude Cox regression analyses, checking of PH assumption, and outliers and Kaplan-Meier curves. 
-* `multivariable_analysis.R`: required packages and coding for multivariable Cox regression analyses, frequency tables, and SMD for comparing exposed vs. non-esposed groups. 
-* `ps_analysis.R`: required packages and coding for the propensity-score model, SMD for balance, and Kaplan-Meier curves. 
-* `optimal_matching_analysis.R`: required packages and coding for the computation of matched analytic samples, crude Cox regression analysis in the matched analytic sample, frequency tables, SMD check for balance, and Kaplan-Meier curves. 
+* `scripts/crude_analysis.R`: required packages and coding for crude Cox regression analyses, checking of PH assumption, and outliers and Kaplan-Meier curves. 
+* `scripts/multivariable_analysis.R`: required packages and coding for multivariable Cox regression analyses, frequency tables, and SMD for comparing exposed vs. non-esposed groups. 
+* `scripts/ps_analysis.R`: required packages and coding for the propensity-score model, SMD for balance, and Kaplan-Meier curves. 
+* `scripts/optimal_matching_analysis.R`: required packages and coding for the computation of matched analytic samples, crude Cox regression analysis in the matched analytic sample, frequency tables, SMD check for balance, and Kaplan-Meier curves. 
 
 **Note**:
 
