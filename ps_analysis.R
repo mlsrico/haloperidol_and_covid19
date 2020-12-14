@@ -5,7 +5,6 @@ library(tidyverse)
 library(survival)
 library(coxphw)
 library(survminer)
-library(car)
 library(survey)
 library(tableone)
 
@@ -85,18 +84,11 @@ resplot$table <- resplot$table + theme(panel.background = element_blank(),
 resplot
 
 
-# SMD for balance ----
+# SMD to check balance ----
 
 psw <- svydesign(ids = ~ 1, data = ps_dat, weights = ~ weights_treat_inv_log) 
 
 psres <- svyCreateTableOne(vars = vars, strata = "gr_var", data = psw, test = FALSE)
 print(psres, smd = TRUE)
-
-
-
-
-
-
-
 
 

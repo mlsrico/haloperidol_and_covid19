@@ -4,7 +4,6 @@
 library(tidyverse)
 library(survival)
 library(coxphw)
-library(survminer)
 library(car)
 
 # Data ----
@@ -21,6 +20,19 @@ dat <- readRDS("XXX/haloperidol_sample.rds")
 # Variables' names vector ----
 
 vars_for_multi <- dat %>% colnames; vars_for_multi
+
+
+# Frequency table --- 
+
+tbcontrol <- compareGroups(gr_var ~ ., data = dat %>% select(all_of(vars_for_multi)))
+restable <- createTable(tbcontrol, show.ratio = F, hide.no = "no")
+restable
+
+
+# SMD to compare exposed vs non-exposed ---- 
+
+compres <- CreateTableOne(vars = vars, strata = "gr_var", data = dat %>% select(all_of(vars_for_multi)), test = FALSE)
+print(compres, smd = TRUE)
 
 
 # Test proportional hazards (PH) assumtion ---- 

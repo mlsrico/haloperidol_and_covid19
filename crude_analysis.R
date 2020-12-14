@@ -31,7 +31,7 @@ summary(res) ## summary
 
 # Weighted univariated Cox regression if PH assumption not met ----
 
-resw <- coxphw(Surv(wait_var, status_var)~gr_var, data = datl, template = "AHR") ## model
+resw <- coxphw(Surv(wait_var, status_var)~gr_var, data = dat, template = "AHR") ## model
 summary(resw) ## summary
 
 
